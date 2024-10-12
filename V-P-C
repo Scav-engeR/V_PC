@@ -1,0 +1,43 @@
+#!/bin/bash
+b="\033[34;1m" # Blue
+ p="\033[39;1m" # White
+  k="\033[33;1m" # Yellow
+   m="\033[31;1m" # Red
+    h="\033[32;1m" # Green
+     c="\033[35;1m" # Purple 
+      pu="\033[36;1m" # Light Blue 
+       x="\033[30;1m" # Abu2
+        o="\033[0m" # End
+
+apt update -y
+pkg install openssh -y
+pkg install sshpass -y
+clear
+
+
+echo -n "\n\t${p}[${h}+${p}]${o} Vps By ScaV"
+echo -n "\t${p}[${h}+${p}]${o} Telegram : @Ghiddra\n\n"
+echo -n "${p}[${h}+${p}]${o} IP  Vps :  "
+read us3;
+echo -n "${p}[${h}+${p}]${o} Username Vps :  "
+read us1;
+echo -n "${p}[${h}+${p}]${o} Password Vps :  "
+read us2;
+clear
+echo 'Open a new terminal tab on termux'
+echo -n 'continue and enter'
+read ui3;
+echo 'paste it 2\n'
+echo 'ssh '$us1'@'$us3'\n'
+echo 'click yes\n'
+echo 'continue and ctrl+c'
+echo -n 'press enter'
+read uo2;
+clear
+echo 'enter the name of the file to use with your vps'
+echo -n 'name of the vps file: '
+read us5;
+clear
+echo 'sshpass -p "'$us2'" ssh '$us1'@'$us3'' > $us5
+echo 'open vps'
+echo "enter: sh $us5"
